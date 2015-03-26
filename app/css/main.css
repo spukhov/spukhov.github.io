@@ -1,0 +1,115 @@
+body{
+	font-family: 'Roboto', sans-serif;
+    /*background-image: url('http://about.worksorted.com/wp-content/uploads/2014/07/blurred-background-10.jpg');
+    background-size: 100%;*/
+}
+.container-main{width:100%;}
+
+.container-skills {
+	display: flex;
+	flex-wrap: wrap;
+}
+.container-login {
+	width:300px;
+}
+
+.skill-group {
+	width:90%;
+	padding: 0.5em;
+	background: #ddd;
+	height:100%;
+	margin: 1em 1em 0 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+@media screen and (max-width: 400px) {
+
+	.container-login {
+		margin:auto;
+	}
+}
+@media screen and (min-width: 401px) {
+	.skill-group {
+		width:40%;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.skill-group {
+		width:20%;
+	}
+    .container-main{
+        width:80%;
+        margin:auto;
+    }
+}
+
+/*  
+	SKILLS
+*/
+
+.skill {
+	margin-right:2%;
+	margin-bottom: 0.5em;
+    text-align: center;
+}
+.skill *{
+    vertical-align: middle;
+}
+.s1 {
+	min-width:73%;
+	min-height:48px;
+	background-color: #ccd344;
+}
+.s2 {
+	min-width:48%;
+	min-height:48px;
+	background-color: #a4d334;
+}
+.s3 {
+	min-width:23%;
+	min-height: 48px;
+	background-color: #de6f7f;
+}
+
+input {
+    text-align: center;
+	font-size: 1.2em;
+	width:100%;
+	min-height: 48px;
+	border:none;
+	border-bottom: 1px solid #ddd;
+}
+input::-webkit-input-placeholder {
+    text-align: center;
+}
+input:focus, textarea:focus {
+	outline: 0;
+}
+input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
+	color:#a4d334;
+}
+input[type=submit]{
+
+}
+
+.ng-invalid.ng-dirty {
+	border-color: #fa787e;
+}
+.ng-valid.ng-dirty {
+	border-color: #a4d334;
+}
+
+h1{ font-family: 'Codystar';
+    font-size: 40px;
+}
+
+.login-header{
+    background-image: url('http://about.worksorted.com/wp-content/uploads/2014/07/blurred-background-10.jpg');
+    background-size: 100%;
+    position: fixed;
+    left:0;top:0;z-index: -999;
+    height: 150px;
+    width: 100%;
+}

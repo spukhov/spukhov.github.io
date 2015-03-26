@@ -1,0 +1,51 @@
+<loading-state show="loading"></loading-state>
+
+<ul class="pager back-button">
+    <li><a href="/skiller/#/"><span aria-hidden="true">&larr;</span>  Back</a></li>
+</ul>
+
+<div ng-controller="OccupationCtrl">
+    <h1 class="text-center">
+        {{ occupation }}
+    </h1>
+
+    <div class="container">
+        <div class="row list-skills">
+            <div class="col-md-7">
+                <ul class="list-group">
+
+                    <li class="list-group-item" ng-repeat="skill in skills">
+                        <div class="skill" type="button"
+                                data-toggle="collapse" data-target="#{{skill.id}}"
+                                aria-expanded="false" aria-controls="{{skill.id}}">
+                            <img src="{{skill.imageUrl}}" height="50" width="50"
+                                 style="border-radius: 50%; border:2px solid #ccc;">
+                            {{ skill.name | firstCapital }}
+                            <div style="width:{{ skill.ranks[0].rank * 2 }}px;
+                            background: hotpink; margin-top:10px;
+                            padding:0 3px;">
+
+                                <p style = "font-size:11px;color:black; text-decoration: none;"> {{skill.ranks[0].rank}}</p>
+                            </div>
+
+                        </div>
+                        <div class="collapse" id="{{skill.id}}">
+                            <div class="well">
+
+                                <strong>Description: </strong><br />
+                                {{ skill.description }}<br />
+                                <strong>Courses: </strong><br />
+                                <div ng-repeat="link in skill.links">
+
+                                    <a href="{{ link.url }}">{{ link.name }}</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
