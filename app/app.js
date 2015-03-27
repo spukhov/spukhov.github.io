@@ -1,6 +1,7 @@
 'use strict';
 
 var skillerApp = angular.module('skillerApp', [
+    'OccupationsService',
     'ngRoute'
 ]);
 
@@ -26,6 +27,16 @@ skillerApp.controller('MainCtrl', [function(){
 
 }]);
 
+skillerApp.factory('Skills', ['$resource',
+        function($resource) {
+            return $resource(
+                'http://localhost:8080/skiller/api/skills/:occupation', { occupation: '@occupation'}, {
+                    query: { method: 'GET', isArray: false, cache: true }
+                }
+            );
+        }
+    ]);
+
 skillerApp.controller('LoginCtrl', ['$scope', '$http', '$log', function($scope, $http, $log){
     $scope.email = null;
     $scope.password = null;
@@ -35,3 +46,4 @@ skillerApp.controller('LoginCtrl', ['$scope', '$http', '$log', function($scope, 
             .success(function(data){$log.error(data)});
     }
 }]);
+

@@ -1,15 +1,14 @@
 <div class="login-header"></div>
+<h1>Hello there!</h1>
+
 <div class="container-login">
 
-  <h1>Hello there!</h1>
 
-  <p>Angular test - {{3 +7}}. By the way, this site is awesome</p>
 
   <form name="loginForm"  ng-controller="LoginCtrl as ctrl" ng-submit="loginForm.$valid && login()" novalidate>
     <input type="email" name="email" placeholder="email" ng-model="email" required>
     <input type="password" name="password" placeholder="password" ng-model="password" required>
 
     <input ng-href="#/" type="submit" value="Sign in">
-    <div ng-show="!loginForm.$valid">Check your credentials</div>
   </form>
 </div>

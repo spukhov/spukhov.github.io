@@ -1,31 +1,44 @@
 <loading-state show="loading"></loading-state>
 
-<div class="container-skills">
+<div class="container-skills" ng-controller="OccupationCtrl">
     <div class="skill-group">
-        <br>
-        <div class="skill s1"><p>Spring</p></div>
-        <div class="skill s3"><p>JSP</p></div>
-        <div class="skill s2"><p>Hadoop</p></div>
-        <div class="skill s2"><p>GWT</p></div>
-        <div class="skill s3"><p>JSF</p></div>
-        <div class="skill s1"><p>EJB</p></div>
+      <div class="skill-header">
+        <h2>back-end</h2>
+      </div>
+      <div class="container" ng-repeat="skill in skills">
+        <div class="thumb">
+          <div class="content">
+            <h3>{{skill.name}}</h3>
+            <p>
+              {{skill.description}}
+            </p>
+          </div>
+          <div class="wrapper" onmouseover="over(this);"
+                  onmouseout="out(this);">
+            <img src="{{skill.imageUrl}}">
+          </div>
+        </div>
+
+      </div>
     </div>
     <div class="skill-group">
-        <div class="skill s2"></div>
-        <div class="skill s2"></div>
-        <div class="skill s3"></div>
-        <div class="skill s2"></div>
-        <div class="skill s1"></div>
-        <div class="skill s1"></div>
+
     </div>
-    <div class="skill-group">
-        {{2 + 2}}
-    </div>
-    <div class="skill-group">
-        fsg
-    </div>
-    <div class="skill-group">
-        fsg
-    </div>
+
+    <script>
+      $(function(){
+        $('.wrapper').hover(function(){
+          $(this).children().stop().animate({marginTop: '80%', opacity: 0},600);
+        },function(){
+          $(this).children().stop().animate({marginTop: '0%', opacity: 1},600);
+        });
+      })
+      function over(a) {
+        $(a).children().stop().animate({marginTop: '80%', opacity: 0},600);
+      }
+      function out(a) {
+        $(a).children().stop().animate({marginTop: '0%', opacity: 1},600);
+      }
+    </script>
 
 </div>

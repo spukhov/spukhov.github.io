@@ -1,0 +1,65 @@
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+h3 {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fff;
+}
+body {
+  font-family: 'PT Sans';
+  background: url('http://subtlepatterns.com/patterns/whitey.png');
+}
+.skill-group {
+  .clearfix;
+  width: 306px;
+  margin: 10px auto;
+  border: 1px solid #eee;
+  background: #FFF;
+  box-shadow: 0 5px 30px fadeout(black, 40%);
+}
+
+.thumb {
+  color: #eee;
+  box-shadow: 0 5px 5px fadeout(black, 80%) inset;
+  background: url('http://subtlepatterns.com/patterns/black-Linen.png');
+  position: relative;
+  width: 100px;
+  height: 70px;
+  float: left;
+  overflow: hidden;
+  border: 1px solid #eee;
+  cursor: pointer;
+
+  font-size: 8px;
+
+  .wrapper {
+    width: 100px;
+    height: 70px;
+    position: absolute;
+    top: 0; left: 0;
+    img {
+      width: 100px;
+      height: 70px;
+    }
+  }
+  .content {
+    position: absolute;
+    top: 0; left:0;
+    margin: 5px;
+  }
+}
