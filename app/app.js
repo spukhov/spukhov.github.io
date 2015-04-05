@@ -10,7 +10,7 @@ skillerApp.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
             when('/', {
-                templateUrl: 'app/modules/main/main.html',
+                templateUrl: 'app/modules/main/mainRedisign.html',
                 controller: 'MainCtrl'
             })
             .when('/login', {

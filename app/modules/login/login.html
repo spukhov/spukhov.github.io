@@ -1,14 +1,11 @@
-<div class="login-header"></div>
-<h1>Hello there!</h1>
+<loading-state show="loading"></loading-state>
 
-<div class="container-login">
+<div class="tabsContainer" ng-controller="tabsController">
+    <div class="header">
+        <div class="button--blue">
+            Sign In
+        </div>
+    </div>
+</div>
 
-
-
-  <form name="loginForm"  ng-controller="LoginCtrl as ctrl" ng-submit="loginForm.$valid && login()" novalidate>
-    <input type="email" name="email" placeholder="email" ng-model="email" required>
-    <input type="password" name="password" placeholder="password" ng-model="password" required>
-
-    <input ng-href="#/" type="submit" value="Sign in">
-  </form>
 </div>
