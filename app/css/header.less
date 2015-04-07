@@ -2,9 +2,10 @@
     position: fixed;
     background-color: #638bb5;
     top: 0px;
-    padding: 5px;
+    padding: 5px 40px;
     width: 100%;
     height: auto;
+    box-sizing: border-box;
 }
 
 .button--darkBlue {
@@ -12,7 +13,29 @@
     border-radius: 2px;
     background-color: #465468;
     float: right;
-    margin-right: 10px;
     cursor: pointer;
     color: #ffffff;
+    text-align: center;
+    width: auto;
+    display: inline-block;
+}
+
+.header-dropdown {
+    display: block;
+    position: absolute;
+    text-align: middle;
+    border-radius: 2px;
+    width: auto;
+}
+
+.header-dropdown ul {
+    list-style-type: none;
+}
+
+.header-dropdown-item {
+    position: relative;
+    left:-5px;
+    top: 10px;
+    background-color: #638bb5;
+    padding: 5px;
 }

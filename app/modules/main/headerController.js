@@ -6,5 +6,6 @@ skillerApp.controller('HeaderController', ['$scope',
     $scope.console = function (text) {
       console.log(text);
     }
+    $scope.popUpOpened = false;
 ]);
 

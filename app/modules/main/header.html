@@ -1,6 +1,13 @@
 <div class="header" ng-controller="tabsController">
-    <div class="button--darkBlue">
+    <div class="button--darkBlue" ng-click="$scope.popUpOpened = !$scope.popUpOpened">
         Sign In
+    <div ng-show="$scope.popUpOpened" class="header-dropdown">
+        <ul>
+            <li class="header-dropdown-item">
+                With Facebook
+            </li>
+        </ul>
+    </div>
     </div>
 </div>
 
