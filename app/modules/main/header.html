@@ -1,10 +1,10 @@
-<div class="header" ng-controller="tabsController">
+<div class="header" ng-controller="HeaderController">
     <div class="button--darkBlue" ng-click="$scope.popUpOpened = !$scope.popUpOpened">
         Sign In
     <div ng-show="$scope.popUpOpened" class="header-dropdown">
         <ul>
-            <li class="header-dropdown-item">
-                <a href="auth.html">With Facebook</a>
+            <li class="header-dropdown-item" ng-repeat="(name, info) in signInMethods" ng-click="signIn(info)">
+                With {{name}}
             </li>
         </ul>
     </div>

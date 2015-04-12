@@ -1,0 +1,8 @@
+{
+    "Facebook": {
+        "redirectUrl": "authFacebook.html"
+    },
+    "Google": {
+        "redirectUrl": "authGoogle.html"
+    }
+}

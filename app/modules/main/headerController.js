@@ -1,11 +1,17 @@
 'use strict';
 
-skillerApp.controller('HeaderController', ['$scope', 
-    function($scope) {
+skillerApp.controller('HeaderController', function($scope, $http, $location) {
+      $http.get('app/data/signInMethods.json').success(function(response) {
+        $scope.signInMethods = response;
+      });
+
+      $scope.popUpOpened = false;
+
+      $scope.signIn = function (method) {
+        
+        window.location = 'app/modules/auth/' + method.redirectUrl;
+      }
+
     }
-    $scope.console = function (text) {
-      console.log(text);
-    }
-    $scope.popUpOpened = false;
-]);
+);
 
