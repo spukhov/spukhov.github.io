@@ -2,7 +2,8 @@
 
 var skillerApp = angular.module('skillerApp', [
     'OccupationsService',
-    'ngRoute'
+    'ngRoute',
+    'oauth'
 ]);
 
 
