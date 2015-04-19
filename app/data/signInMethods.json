@@ -1,6 +1,9 @@
 {
     "Facebook": {
-        "redirectUrl": "authFacebook.html"
+        "FB_APP_ID": "1035369316492184",
+        "FB_APP_SECRET": "eadc079716a6d0afce3dc92bf0dc3a8c",
+        "REDIRECT_URI": "http://localhost:8080/skiller/api/auth"
+
     },
     "Google": {
         "redirectUrl": "authGoogle.html"

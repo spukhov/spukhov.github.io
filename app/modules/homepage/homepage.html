@@ -1,0 +1,34 @@
+<div ng-include src="'app/modules/main/header.html'"></div>
+<h1>HOMEPAGE</h1>
+<div class="tabsContainer" ng-controller="tabsController">
+        <div class="tabs">
+            <ul class="tabsList">
+                <li class="tabsList-item" ng-repeat="tab in tabs" 
+                    ng-class="{active:isActiveTab(tab.url)}" 
+                    ng-click="onClickTab(tab)">{{tab.title}}</li>
+            </ul>
+            <div class="listItem-content">
+                <div ng-include="currentTab"></div>
+            </div>
+        </div>
+        <script type="text/ng-template" id="one.tpl.html">
+            <div class="main-text" id="viewOne">
+                <h1>View One</h1>
+                <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc.</p>
+            </div>
+        </script>
+        
+        <script  type="text/ng-template" id="two.tpl.html">
+            <div class="main-text" id="viewTwo">
+                <h1>View Two</h1>
+                <p>Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu.</p>
+            </div>
+        </script>
+        
+        <script type="text/ng-template" id="three.tpl.html">
+            <div class="main-text"  id="viewThree">
+                <h1>View Three</h1>
+                <p>In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu.</p>
+            </div>
+        </script>
+</div>
