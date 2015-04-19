@@ -11,21 +11,21 @@ skillerApp.config(['$routeProvider',
         $routeProvider.
             when('/', {
                 templateUrl: 'app/modules/main/mainRedisign.html',
-                controller: 'MainCtrl'
+                //controller: 'MainCtrl'
             })
             .when('/login', {
                 templateUrl: 'app/modules/login/login.html',
                 controller: 'LoginCtrl'
+            })
+            .when('/homepage', {
+                templateUrl: 'app/modules/homepage/homepage.html',
+                controller: 'HomepageController'
             })
             .otherwise({
                 redirectTo: '/'
             });
     }
 ]);
-
-skillerApp.controller('MainCtrl', [function(){
-
-}]);
 
 skillerApp.factory('Skills', ['$resource',
         function($resource) {

@@ -8,8 +8,8 @@ skillerApp.controller('HeaderController', function($scope, $http, $location) {
       $scope.popUpOpened = false;
 
       $scope.signIn = function (method) {
-        
-        window.location = 'app/modules/auth/' + method.redirectUrl;
+        $location.path('/homepage')
+        //window.location = 'app/modules/auth/' + method.redirectUrl;
       }
 
     }
