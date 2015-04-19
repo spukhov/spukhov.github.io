@@ -1,8 +1,9 @@
 {
     "Facebook": {
-        "FB_APP_ID": "1035369316492184",
-        "FB_APP_SECRET": "eadc079716a6d0afce3dc92bf0dc3a8c",
-        "REDIRECT_URI": "http://localhost:8080/skiller/api/auth"
+        "authorization": "https://accounts.google.com/o/oauth2/auth",
+        "providerID": "google",
+        "client_id": "1035369316492184",
+        "redirect_uri": "http://portal.cloudpixx.com:8084/recieveToken"
 
     },
     "Google": {
