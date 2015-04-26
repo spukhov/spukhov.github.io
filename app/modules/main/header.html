@@ -3,10 +3,8 @@
         Sign In
     <div ng-show="$scope.popUpOpened" class="header-dropdown">
         <ul>
-            <li class="header-dropdown-item" ng-repeat="(name, info) in signInMethods" ng-click="signIn(info)">
-                <oauth site="http://spukhov.github.io/" client-id="1035369316492184" redirect-uri="hhttp://spukhov.github.io/index.html#/homepage" profile-uri="https://oauth-ng-server.herokuapp.com/api/v1/me" scope="public" class="ng-isolate-scope">
+            <li class="header-dropdown-item" ng-repeat="(name, info) in signInMethods" ng-click="signIn(name)">
                     With {{name}}
-                </oath>
             </li>
         </ul>
     </div>

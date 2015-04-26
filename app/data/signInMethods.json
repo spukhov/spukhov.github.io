@@ -4,7 +4,6 @@
         "providerID": "google",
         "client_id": "1035369316492184",
         "redirect_uri": "http://portal.cloudpixx.com:8084/recieveToken"
-
     },
     "Google": {
         "redirectUrl": "authGoogle.html"
