@@ -1,9 +1,10 @@
 {
     "Facebook": {
-        "authorization": "https://accounts.google.com/o/oauth2/auth",
-        "providerID": "google",
+        "authorization": "https://www.facebook.com/dialog/oauth",
+        "providerID": "facebook",
+        "presenttoken": "qs",
         "client_id": "1035369316492184",
-        "redirect_uri": "http://portal.cloudpixx.com:8084/recieveToken"
+        "redirect_uri": "http://spukhov.github.io/#/homepage"
     },
     "Google": {
         "redirectUrl": "authGoogle.html"

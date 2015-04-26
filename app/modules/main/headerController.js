@@ -8,7 +8,12 @@ skillerApp.controller('HeaderController', function($scope, $http, $location) {
       $scope.popUpOpened = false;
 
       $scope.signIn = function (method) {
-        console.log(this.signInMethods[method]);
+        var jso = new JSO(this.signInMethods[method]);
+        JSO.enablejQuery($);
+        jso.wipeTokens();
+        jso.ajax({
+            dataType: 'json'
+        });
       }
 
     }

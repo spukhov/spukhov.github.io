@@ -20,9 +20,6 @@ skillerApp.config(['$routeProvider',
             .when('/homepage', {
                 templateUrl: 'app/modules/homepage/homepage.html',
                 controller: 'HomepageController'
-            })
-            .otherwise({
-                redirectTo: '/'
             });
     }
 ]);
