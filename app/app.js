@@ -2,30 +2,25 @@
 
 var skillerApp = angular.module('skillerApp', [
     'OccupationsService',
-    'ngRoute'
+    'ui.router'
 ]);
 
 
-skillerApp.config(['$routeProvider',
-    function($routeProvider) {
-        $routeProvider.
-            when('/', {
-                templateUrl: 'app/modules/main/mainRedisign.html',
-                //controller: 'MainCtrl'
-            })
-            .when('/login', {
-                templateUrl: 'app/modules/login/login.html',
-                controller: 'LoginCtrl'
-            })
-            .when('/homepage', {
-                templateUrl: 'app/modules/homepage/homepage.html',
-                controller: 'HomepageController'
-            })
-            .otherwise({
-                redirectTo: '/homepage'
-            });
-    }
-]);
+skillerApp.config(function($stateProvider, $urlRouterProvider) {
+    $stateProvider
+        .state('main', {
+            url: '/',
+            templateUrl: 'modules/main/mainRedisign.html'
+        })
+        .state('homepage', {
+            url: '/homepage',
+            //abstract: true,
+            templateUrl: 'modules/homepage/homepage.html',
+            controller: 'HomepageController'
+        });
+    $urlRouterProvider.otherwise('/')
+});
+
 
 skillerApp.factory('Skills', ['$resource',
         function($resource) {
